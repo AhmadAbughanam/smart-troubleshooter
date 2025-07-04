@@ -1,0 +1,91 @@
+{
+    "root": {
+        "prompt": "What issue are you facing? (e.g., overheating, wifi issue, no display)",
+        "edges": {}
+    },
+    "overheating": {
+        "prompt": "Is your device shutting down unexpectedly or just hot to the touch?",
+        "edges": {
+            "shutting down": "overheating_shutdown",
+            "hot": "overheating_hot"
+        }
+    },
+    "overheating_shutdown": {
+        "prompt": "Are the vents blocked or is the fan not spinning?",
+        "edges": {
+            "blocked": "overheating_fix_blocked",
+            "fan": "overheating_fix_fan"
+        }
+    },
+    "overheating_hot": {
+        "prompt": "Is the device under heavy use? (e.g., gaming, video editing)",
+        "edges": {
+            "yes": "overheating_fix_heavy",
+            "no": "overheating_fix_idle"
+        }
+    },
+    "overheating_fix_blocked": {
+        "response": "Unblock the vents and clean the dust. Use compressed air. Monitor temperature again.",
+        "terminal": true
+    },
+    "overheating_fix_fan": {
+        "response": "Check if the fan is spinning. If not, it may need replacement or servicing.",
+        "terminal": true
+    },
+    "overheating_fix_heavy": {
+        "response": "Reduce workload or improve cooling (external fan, cooling pad).",
+        "terminal": true
+    },
+    "overheating_fix_idle": {
+        "response": "Run antivirus/malware scan and check for background processes.",
+        "terminal": true
+    },
+    "wifi_issue": {
+        "prompt": "Is the Wi-Fi icon showing connected but there's no internet?",
+        "edges": {
+            "yes": "wifi_no_internet",
+            "no": "wifi_no_connection"
+        }
+    },
+    "wifi_no_internet": {
+        "prompt": "Can other devices access the internet on the same network?",
+        "edges": {
+            "yes": "wifi_reset_adapter",
+            "no": "wifi_check_router"
+        }
+    },
+    "wifi_no_connection": {
+        "prompt": "Do you see your Wi-Fi network in the list?",
+        "edges": {
+            "yes": "wifi_enter_password",
+            "no": "wifi_toggle_adapter"
+        }
+    },
+    "wifi_reset_adapter": {
+        "response": "Reset your network adapter or run Windows Network Troubleshooter.",
+        "terminal": true
+    },
+    "wifi_check_router": {
+        "response": "Restart the router. Check if the ISP is down.",
+        "terminal": true
+    },
+    "wifi_enter_password": {
+        "response": "Re-enter the correct Wi-Fi password. Make sure Caps Lock is off.",
+        "terminal": true
+    },
+    "wifi_toggle_adapter": {
+        "response": "Toggle Wi-Fi adapter off and on. Reboot if needed.",
+        "terminal": true
+    },
+    "battery_issue": {
+        "prompt": "Is your device not charging or draining quickly?",
+        "edges": {
+            "not charging": "charging_problem",
+            "draining": "drain_problem"
+        }
+    },
+    "charging_problem": {
+        "response": "Please check your charger cable and power outlet. Replace if faulty.",
+        "terminal": true
+    }
+}
