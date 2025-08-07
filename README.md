@@ -1,86 +1,88 @@
-# Smart Troubleshooting Chatbot (Local IT Help Assistant)
+# 🤖 **Smart Troubleshooting Chatbot**  
+**Local IT Help Assistant — CLI + GUI**
 
-**Description**  
-A Python-based CLI and Tkinter GUI chatbot that helps users diagnose hardware, software, and network issues using CompTIA A+ knowledge. Combines decision trees, keyword detection, and lightweight AI responses to guide troubleshooting workflows.
+A Python-based chatbot that helps users diagnose hardware, software, and network issues using CompTIA A+ knowledge. Combines decision trees, keyword detection, and lightweight AI responses to guide troubleshooting workflows.
 
----
-
-## Features
-
-- Interactive CLI and Tkinter-based GUI
-- Pretrained troubleshooting workflows modeled as decision trees
-- Node management via admin GUI (add, edit, delete, stats)
-- Modular design with Python OOP and JSON workflow storage
+> 🧠 Built for IT support, tech learners, and helpdesk automation — with both CLI and GUI interfaces.
 
 ---
 
-## Technologies Used
+## 🚀 Features
 
-- Python 3.13+
-- Tkinter (standard Python GUI library)
-- Natural Language Processing & Decision Tree logic
-- JSON for workflow data storage
+| Feature                        | Description                                                                 |
+|-------------------------------|-----------------------------------------------------------------------------|
+| 💬 **Interactive CLI & GUI**   | Use via terminal or Tkinter-based desktop interface                         |
+| 🌳 **Decision Tree Workflows** | Pretrained troubleshooting paths modeled as decision trees                  |
+| 🛠️ **Admin GUI**               | Add/edit/delete nodes, view stats, manage workflows                         |
+| 🧩 **Modular Design**          | Python OOP architecture with JSON-based workflow storage                    |
 
 ---
 
-## Installation
+## 🛠️ Technologies Used
+
+| Component       | Technology                     |
+|----------------|---------------------------------|
+| **Language**    | Python 3.13+                    |
+| **GUI**         | Tkinter (built-in Python GUI)   |
+| **Logic**       | Decision Trees, NLP             |
+| **Storage**     | JSON for workflow data          |
+
+---
+
+## 📦 Installation
 
 ```bash
 git clone https://github.com/yourusername/smart-troubleshooting-chatbot.git
 cd smart-troubleshooting-chatbot
 
+# Create and activate virtual environment
 python -m venv venv
-# Activate virtual environment:
-# Windows: venv\Scripts\activate
-# macOS/Linux: source venv/bin/activate
+source venv/bin/activate      # macOS/Linux
+venv\Scripts\activate         # Windows
 
-pip install -r requirements.txt  # (Empty or minimal file)
+# Install dependencies
+pip install -r requirements.txt
 ```
 
----
-
-## Usage
-
-- Run CLI chatbot:
-
-  ```bash
-  python engine.py
-  ```
-
-- Run user GUI chatbot (Tkinter):
-
-  ```bash
-  python gui_main.py
-  ```
-
-- Run admin GUI for managing workflow nodes:
-  ```bash
-  python admin_gui_tk.py
-  ```
+> ⚠️ `requirements.txt` is minimal — most dependencies are built-in.
 
 ---
 
-## Project Structure
+## ▶️ Usage
+
+| Mode        | Command                          |
+|-------------|----------------------------------|
+| 🖥️ CLI Chatbot | `python engine.py`              |
+| 🪟 User GUI   | `python gui_main.py`             |
+| 🧑‍💼 Admin GUI  | `python admin_gui_tk.py`         |
+
+---
+
+## 📁 Project Structure
 
 ```
 .
 ├── engine.py            # Core chatbot engine & CLI interface
 ├── gui_main.py          # User chatbot GUI (Tkinter)
-├── admin_gui_tk.py      # Admin GUI for workflow management (Tkinter)
+├── admin_gui_tk.py      # Admin GUI for workflow management
 ├── workflow_manager.py  # Workflow CRUD operations
 ├── workflows.json       # Troubleshooting workflows data
 ├── README.md            # Project documentation
-└── requirements.txt     # Python dependencies (minimal)
+└── requirements.txt     # Python dependencies
 ```
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
-Contributions are welcome! Please open issues or submit pull requests.
+Contributions are welcome!  
+Feel free to open issues or submit pull requests to improve features, workflows, or UI.
 
 ---
 
-## License
+## 📃 License
 
-MIT License
+Licensed under the **MIT License** — free to use, modify, and distribute.
+
+---
+
